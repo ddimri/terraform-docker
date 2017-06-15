@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sts:AssumeRole"
+            ],
+            "Resource": [
+                "arn:aws:iam::583795815633:role/OIDCRole",
+                "arn:aws:iam::157065524616:role/OIDCRole",
+                "arn:aws:iam::274255530568:role/OIDCRole",
+                "arn:aws:iam::734288611257:role/OIDCRole",
+                "arn:aws:iam::185869774838:role/OIDCRole",
+                "arn:aws:iam::582093734380:role/OIDCRole",
+                "arn:aws:iam::833403116707:role/OIDCRole",
+                "arn:aws:iam::920379730419:role/OIDCRole",
+                "arn:aws:iam::131151752744:role/OIDCRole",
+                "arn:aws:iam::781926009556:role/OIDCRole",
+                "arn:aws:iam::106227416501:role/OIDCRole",
+                "arn:aws:iam::793377275304:role/OIDCRole",
+                "arn:aws:iam::560545782150:role/OIDCRole",
+                "arn:aws:iam::196543156934:role/OIDCRole",
+                "arn:aws:iam::744038817226:role/OIDCRole",
+                "arn:aws:iam::530130240820:role/OIDCRole",
+                "arn:aws:iam::595386306323:role/OIDCRole",
+                "arn:aws:iam::329290777459:role/OIDCRole"
+
+            ]
+        }
+    ]
+}
