@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "cloudwatch:describeAlarmHistory",
+                "cloudwatch:describeAlarms",
+                "cloudwatch:getMetricData",
+                "cloudwatch:getMetricDataForAccounts",
+                "cloudwatch:getMetricStatistics",
+                "cloudwatch:listMetrics",
+                "cloudwatch:putMetricAlarm",
+                "cloudwatch:putMetricData"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}
