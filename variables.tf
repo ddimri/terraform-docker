@@ -16,15 +16,13 @@ variable "availability_zones" {
   default = ["us-west-2a", "us-west-2b"]
 }
 
-#variable "task_role_arn" { default = "arn:aws:iam::157065524616:/role/awslogin-task-role" }
-
-variable "aws_account" { default = "157065524616" }
+variable "aws_account" { default = "398818754185" }
 
 variable "environment" { default = "opswest" }
 
-variable "project" { default = "awslogin" }
+variable "project" { default = "docker" }
 
-variable "vpc_name" { default = "awslogin-mgmt-vpc" }
+variable "vpc_name" { default = "docker-mgmt-vpc" }
 
 variable "feyedc_cidr_block" { default = "96.46.157.30/32" }
 
@@ -34,7 +32,7 @@ variable "vpc_cidr_block" { default = "10.88.11.0/24" }
 
 variable "ccjumpbox_ami" { default = "ami-efd0428f" }
 
-variable "private_key" { default = "~/.ssh/awslogin-key.pem" }
+variable "private_key" { default = "~/.ssh/e2-key-file.pem" }
 
 variable "public_subnet1_cidr_block" { default = "10.88.11.1/28" }
 
@@ -44,16 +42,16 @@ variable "private_subnet1_cidr_block" { default = "10.88.11.32/28" }
 
 variable "private_subnet2_cidr_block" { default = "10.88.11.48/28" }
 
-variable "ssl_certificate" { default = "arn:aws:iam::157065524616:server-certificate/feyemetrics" }
+variable "ssl_certificate" { default = "arn:aws:iam::398818754185:server-certificate/docker-hello-world" }
 
 variable "ecs_cluster_name" {
     description = "The name of the Amazon ECS cluster."
-    default = "awslogin_ecs_cluster"
+    default = "docker_ecs_cluster"
 }
 
-variable "awslogin_server_ami" {
+variable "docker_server_ami" {
     default = {
-      us-west-2 = "ami-2c767855"
+      us-west-2 = "ami-77f0fb0e"
       #us-west-2 = "ami-62d35c02"
     }
 }
@@ -79,12 +77,12 @@ variable "instance_type" {
     default = "t2.micro"
 }
 
-variable "aws_profile" { default = "awslogin-india0" }
+variable "aws_profile" { default = "deepakprasad" }
 
-variable "home_dir" { default = "/home/deepak_dimri1" }
+variable "home_dir" { default = "/Users/deepak.prasad" }
 
-variable "key_name" { default = "awslogin-key" }
+variable "key_name" { default = "e2-key-file" }
 
-variable "docker_port" { default = "4000" }
+variable "docker_port" { default = "80" }
 
-variable "host_port" { default = "4000" }
+variable "host_port" { default = "80" }
