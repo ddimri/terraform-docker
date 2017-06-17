@@ -475,7 +475,7 @@ resource "aws_ecs_task_definition" "docker_ecs_cluster" {
   family = "docker_ecs_cluster"
   container_definitions = "${file("task-definition.json.tmpl")}"
  # role = ["${aws_iam_role.docker-task-role.id}"]
-  task_role_arn  = "arn:aws:iam::${var.aws_account}:role/ecs-task-role"
+  #task_role_arn  = "arn:aws:iam::${var.aws_account}:role/ecs-task-role"
 }
 
 resource "aws_autoscaling_group" "docker_ecs_cluster_instances" {
