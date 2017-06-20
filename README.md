@@ -23,7 +23,7 @@ sudo docker run --name ecs-agent --detach=true --restart=on-failure:10 --volume=
 
 Create an AMI
 ```
-Follow the instrictions/commands on your Local machine
+Follow these instrictions/commands on your Local machine
 
 ```
 Docker
