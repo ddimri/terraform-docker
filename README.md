@@ -26,6 +26,17 @@ Create an AMI
 Follow these instrictions/commands on your Local machine
 
 ```
+
+# Doker installation
+To install Docker on an Amazon Linux instance
+
+sudo yum update -y
+sudo yum install -y docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+#logout and log back in
+docker info
+
 Docker
 =======
 
