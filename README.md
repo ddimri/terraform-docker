@@ -37,27 +37,26 @@ sudo usermod -a -G docker ec2-user
 #logout and log back in
 docker info
 
-Docker
-=======
-
-mkdir docker
-cd docker
+mkdir aws-training
+cd aws-training
 vi Dockerfile
 	FROM nginx:alpine
 	COPY . /usr/share/nginx/html
 vi index.html
 	<p><font face="verdana" color="blue">Welcome to AWS Training!</font></p>
 
+docker build -t aws-training .
+
 git clone https://github.com/ddimri/static-app
 git push --mirror <your github repo>
 
-Create ECR  named "static-app' to store Docker images
+Create ECR  named 'aws-training' to store Docker images
 aws ecr get-login --region us-west-2 --profile deepakprasad
 docker login
-docker build -t static-app .
-docker tag static-app:latest 398818754185.dkr.ecr.us-west-2.amazonaws.com/static-app:latest
-docker push 398818754185.dkr.ecr.us-west-2.amazonaws.com/static-app:latest
-docker run -d --name static-app:v1 -p 80:80 static-app:v1
+docker build -t aws-training .
+docker tag static-app:latest 398818754185.dkr.ecr.us-west-2.amazonaws.com/aws-training:latest
+docker push 398818754185.dkr.ecr.us-west-2.amazonaws.com/aws-training:latest
+docker run -d --name aws-training -p 80:80 aws-training
 
 
 terraform
